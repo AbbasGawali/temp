@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        :root{
+            --primary-color: rgb(135, 17, 17);
+            --y-color: rgb(120, 82, 224);
+            
+            /* --secondary-color:black; */
+        }
+        .dark-theme{
+            --secondary-color:black;
+            --p-color: rgb(82, 224, 106);
+
+        }
+        h1{
+            background-color: var(--y-color) ;
+            background-color: var(--p-color) ;
+        }
+
+        body{
+            background-color: var(--primary-color);
+            background-color: var(--secondary-color);
+        }
+        #box{
+            background-color: orange;
+            color: green;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 10px 0;
+
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-btn{
+            border: none;
+            background-color: yellowgreen;
+            width: 20vw;
+            height: 7vh;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .box-btn:hover{
+            background-color: rgb(83, 71, 255);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+    <div id="box" >hello</div>
+
+    <h1>hell</h1>
+    <button onclick="myfunc()" class="box-btn">Click</button>
+</div>
+
+   
+<script>
+    var icon = document.getElementById("box-btn");
+    const myfunc = () =>{
+        document.body.classList.toggle("dark-theme");
+    }
+</script>
+</body>
+</html>
